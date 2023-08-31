@@ -7,6 +7,7 @@ This repo demonstrates how we can use an ```nginx``` container running on Cloud 
 * You have working knowledge/understanding of Google Cloud Services
 * Basic hands-on knowledge of using Google Cloud Console/```gcloud``` cli
 * A Google Cloud account with correct privileges
+* Sample code and artifacts for static website
 
 ## Usage:
 * Please refer to the `commands_playbook.sh` file for commands used to run this demo.
