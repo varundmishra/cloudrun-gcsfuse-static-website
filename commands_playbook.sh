@@ -9,6 +9,7 @@ export BUCKET=YOUR_BUCKET_NAME
 gcloud config set project $PROJECT_ID
 #Configure gcloud for your chosen region:
 gcloud config set run/region $REGION
+gcloud config set builds/region $REGION
 
 #Service Account Creation
 #Create a service account to serve as the service identity:
@@ -18,7 +19,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID --member "serviceAccount:cr-i
 
 #Setting up the Cloud Storage Bucket
 #Create a bucket:
-gcloud storage buckets create gs://$BUCKET
+gcloud storage buckets create gs://$BUCKET --public-access-prevention
 #Copy files from you local dir to Cloud Storage Bucket
 gcloud storage cp local-dir/index.html gs://$BUCKET 
 #Alternatively you can upload files using the gsutil rsync
